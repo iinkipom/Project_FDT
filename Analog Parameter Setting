@@ -1,0 +1,235 @@
+//Analog Parameter Setting//
+(* Write *)
+// RWwm0 -> Ch1 Average Setting
+// RWwm1 -> Ch2 Average Setting
+// RWwm2 -> Ch3 Average Setting
+// RWwm3 -> Ch4 Average Setting
+(* Read *)
+// RWrn0 -> Ch1 Digital Output
+// RWrn1 -> Ch2 Digital Output
+// RWrn2 -> Ch3 Digital Output
+// RWrn3 -> Ch4 Digital Output
+
+//Box1 -> Start (Write) W140, (Read) W540 || End (Write) W15F, (Read) W55F
+
+//H400 -> D0Z0
+
+//VAR_GLOBAL
+   // Analog_Parameter_Setting_Fn_CH2: BOOL; (* Comment *)
+//END_VAR
+
+IF Analog_Parameter_Setting_Fn_CH1 = H1 THEN
+	EMOVP(TRUE,E10.00,i_Analog_MAX_CH1);
+	EMOVP(TRUE,E-10.00,i_Analog_MIN_CH1);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH1);
+	EMOVP(TRUE,E-16000.00,i_Digital_MIN_CH1);
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H2 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH1);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH1);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH1);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH1);
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H3 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH1);
+	EMOVP(TRUE,E1.00,i_Analog_MIN_CH1);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH1);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH1);
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H4 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH1);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH1);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH1);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH1);
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H5 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH1);
+	EMOVP(TRUE,E4.00,i_Analog_MIN_CH1);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH1;
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH1);
+END_IF;
+
+
+IF Analog_Parameter_Setting_Fn_CH2 = H1 THEN
+	EMOVP(TRUE,E10.00,i_Analog_MAX_CH2);
+	EMOVP(TRUE,E-10.00,i_Analog_MIN_CH2);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH2);
+	EMOVP(TRUE,E-16000.00,i_Digital_MIN_CH2);
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H2 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH2);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH2);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH2);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH2);
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H3 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH2);
+	EMOVP(TRUE,E1.00,i_Analog_MIN_CH2);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH2);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH2);
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H4 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH2);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH2);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH2);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH2);
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H5 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH2);
+	EMOVP(TRUE,E4.00,i_Analog_MIN_CH2);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH2;
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH2);
+END_IF;
+
+IF Analog_Parameter_Setting_Fn_CH3 = H1 THEN
+	EMOVP(TRUE,E10.00,i_Analog_MAX_CH3);
+	EMOVP(TRUE,E-10.00,i_Analog_MIN_CH3);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH3);
+	EMOVP(TRUE,E-16000.00,i_Digital_MIN_CH3);
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H2 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH3);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH3);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH3);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH3);
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H3 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH3);
+	EMOVP(TRUE,E1.00,i_Analog_MIN_CH3);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH3);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH3);
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H4 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH3);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH3);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH3);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH3);
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H5 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH3);
+	EMOVP(TRUE,E4.00,i_Analog_MIN_CH3);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH3;
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH3);
+END_IF;
+
+IF Analog_Parameter_Setting_Fn_CH4 = H1 THEN
+	EMOVP(TRUE,E10.00,i_Analog_MAX_CH4);
+	EMOVP(TRUE,E-10.00,i_Analog_MIN_CH4);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH4);
+	EMOVP(TRUE,E-16000.00,i_Digital_MIN_CH4);
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H2 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH4);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH4);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH4);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH4);
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H3 THEN
+	EMOVP(TRUE,E5.00,i_Analog_MAX_CH4);
+	EMOVP(TRUE,E1.00,i_Analog_MIN_CH4);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH4);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH4);
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H4 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH4);
+	EMOVP(TRUE,E0.00,i_Analog_MIN_CH4);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH4);
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH4);
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H5 THEN
+	EMOVP(TRUE,E20.00,i_Analog_MAX_CH4);
+	EMOVP(TRUE,E4.00,i_Analog_MIN_CH4);
+	EMOVP(TRUE,E16000.00,i_Digital_MAX_CH4;
+	EMOVP(TRUE,E0.00,i_Digital_MIN_CH4);
+END_IF;
+
+
+// Need to add enterling button but need to check it will effect or another funtion or not.
+//All will be change following Indexing
+(* CH1 *)
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MAX_CH1,D0Z1); //For Holding Analog Max value from any station for CH1 -> Ex. D140-D141 (Analog MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MIN_CH1,D2Z1); //For Holding Analog Min value from any station for CH1 -> Ex. D142-D143 (Analog MIN for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MAX_CH1,D4Z1); //For Holding Digital Max value from any station for CH1 -> Ex. D144-D145 (Digital MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MIN_CH1,D6Z1); //For Holding Digital Min value from any station for CH1 -> Ex. D146-D147 (Digital MIN for Station 1)
+END_IF;
+
+
+(* CH2 *)
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MAX_CH2,D8Z1); //For Holding Analog Max value from any station for CH2 -> Ex. D140-D141 (Analog MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MIN_CH2,D10Z1); //For Holding Analog Min value from any station for CH2 -> Ex. D142-D143 (Analog MIN for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MAX_CH2,D12Z1); //For Holding Digital Max value from any station for CH2 -> Ex. D144-D145 (Digital MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MIN_CH2,D14Z1); //For Holding Digital Min value from any station for CH2 -> Ex. D146-D147 (Digital MIN for Station 1)
+END_IF;
+
+
+
+(* CH3 *)
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MAX_CH3,D16Z1); //For Holding Analog Max value from any station for CH3 -> Ex. D140-D141 (Analog MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MIN_CH3,D18Z1); //For Holding Analog Min value from any station for CH3 -> Ex. D142-D143 (Analog MIN for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MAX_CH3,D20Z1); //For Holding Digital Max value from any station for CH3 -> Ex. D144-D145 (Digital MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MIN_CH3,D22Z1); //For Holding Digital Min value from any station for CH3 -> Ex. D146-D147 (Digital MIN for Station 1)
+END_IF;
+
+
+
+(* CH4 *)
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MAX_CH4,D24Z1); //For Holding Analog Max value from any station for CH4 -> Ex. D140-D141 (Analog MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Analog_MIN_CH4,D26Z1); //For Holding Analog Min value from any station for CH4 -> Ex. D142-D143 (Analog MIN for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MAX_CH4,D28Z1); //For Holding Digital Max value from any station for CH4 -> Ex. D144-D145 (Digital MAX for Station 1)
+END_IF;
+
+IF i_Range_Setting_Flag_Check AND Enterling_Button THEN
+	EMOVP(TRUE,i_Digital_MIN_CH4,D30Z1); //For Holding Digital Min value from any station for CH4 -> Ex. D146-D147 (Digital MIN for Station 1)
+END_IF;
+
+
+(* Reset State *)
+
+PLF(M400,M50);
+//CH1
+RST(M50,i_Analog_MAX_CH1);
+RST(M50,i_Analog_MIN_CH1);
+RST(M50,i_Digital_MAX_CH1);
+RST(M50,i_Digital_MIN_CH1);
+//CH2
+RST(M50,i_Analog_MAX_CH2);
+RST(M50,i_Analog_MIN_CH2);
+RST(M50,i_Digital_MAX_CH2);
+RST(M50,i_Digital_MIN_CH2);
+//CH3
+RST(M50,i_Analog_MAX_CH3);
+RST(M50,i_Analog_MIN_CH3);
+RST(M50,i_Digital_MAX_CH3);
+RST(M50,i_Digital_MIN_CH3);
+//CH4
+RST(M50,i_Analog_MAX_CH4);
+RST(M50,i_Analog_MIN_CH4);
+RST(M50,i_Digital_MAX_CH4);
+RST(M50,i_Digital_MIN_CH4);
+
+
+;
