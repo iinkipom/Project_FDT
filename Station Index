@@ -1,0 +1,70 @@
+IF i_Box_Station_Selection = 1 THEN
+	
+	MOV(TRUE,H400,Staion_Index_For_Y_Set);
+	MOV(TRUE,K140,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+
+
+	ELSIF i_Box_Station_Selection = 2 THEN
+	MOV(TRUE,H500,Staion_Index_For_Y_Set);
+	MOV(TRUE,K160,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+	ELSIF i_Box_Station_Selection = 3 THEN
+	MOV(TRUE,H600,Staion_Index_For_Y_Set);
+	MOV(TRUE,K180,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+	ELSIF i_Box_Station_Selection = 4 THEN
+	MOV(TRUE,H700,Staion_Index_For_Y_Set);
+	MOV(TRUE,K200,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+	ELSIF i_Box_Station_Selection = 5 THEN
+	MOV(TRUE,H800,Staion_Index_For_Y_Set);
+	MOV(TRUE,K220,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+	ELSIF i_Box_Station_Selection = 6 THEN
+	MOV(TRUE,H900,Staion_Index_For_Y_Set);
+	MOV(TRUE,K240,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+	ELSIF i_Box_Station_Selection = 10 THEN
+	MOV(TRUE,HA00,Staion_Index_For_Y_Set);
+	MOV(TRUE,K280,Station_Index_For_D_Set);
+	MOV(TRUE,Staion_Index_For_Y_Set,Staion_Index_For_Y_Set_Holding);
+	MOV(TRUE,Station_Index_For_D_Set,Station_Index_For_D_Set_Holding);
+	MOV(Enterling_Button,H000,Staion_Index_For_Y_Set);
+	MOV(Enterling_Button,K0,Station_Index_For_D_Set);
+	
+	ELSE
+	MOV(TRUE,H0,Staion_Index_For_Y_Set);
+	MOV(TRUE,K0,Station_Index_For_D_Set);
+END_IF;
+
+//IF Count_Ena_ST1_CH1 = 1 THEN
+	//ON_Flage := TRUE;
+//END_IF;
+
+
+;
