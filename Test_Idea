@@ -1,0 +1,14 @@
+IF X1 THEN
+    X1_Holding := TRUE;
+    INC(X1,X1_Count);
+END_IF;
+
+IF X1_Holding THEN
+    Output_1 := TRUE;
+END_IF;
+
+IF X1_Count = 2 THEN
+    X1_ Holding := FALSE;
+END_IF;
+
+//If did worked, need to change the part of rst i_Ena and i_Range_Setting change from flag clear stage -> execution by count if = 2 times instead.
