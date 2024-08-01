@@ -1,0 +1,310 @@
+//STRUCTURE OF ANALOG TO DIGITAL FUNCTION SETTING//
+//Y300 = Control Panel,
+//Y400 = Box Test No.1,
+//Y500 = Box Test No.2,
+//Y600 = Box Test No.3,
+//Y700 = Box Test No.4,
+//Y800 = Box Test No.5,
+//Y900 = Box Test No.6,
+
+//RY140 = ON CH1, 141 = ON CH2, 142 = ON CH3, 143 = ON CH4
+// {F E D | C} {B A | 9 8} {7 | 6 5 4} | 3 2 1 0
+//O_RYn0 :=
+//O_RYn1 :=
+//O_RYn2 :=
+//O_RYn3 :=
+//O_RYn4 := 
+//O_RYn5 :=
+//O_RYn6 :=
+//O_RYn7 :=
+//O_RYn8 :=
+//O_RYn9 :=
+//O_RYnA :=
+//O_RYnB :=
+//O_RYnC :=
+//O_RYnD :=
+//O_RYnE :=
+//O_RYnF :=
+//O_RYn18 :=
+//O_RYn19 :=
+
+//0 : H0 -10 to 10V
+//1 : H1 0 to 5V
+//2 : H2 1 to 5V
+//3 : H3 0 to 20mA
+//4 : H4 4 to 20mA
+
+//I1 = CH1
+//I2 = CH2
+//I3 = CH3
+//I4 = CH4
+
+
+(* 27-Jul-24 : Remain Disable Step for close channel *)
+
+(* i_Ena_Flag_Check *)
+IF i_Ena_CH1_Holding OR i_Ena_CH2_Holding OR i_Ena_CH3_Holding OR i_Ena_CH4_Holding THEN
+	i_Ena_Holding_Flag_Check := TRUE;
+	ELSE
+	i_Ena_Holding_Flag_Check := FALSE;
+END_IF;
+
+
+(* i_Range_Setting_Flag_Check *)
+IF i_Range_Setting_0to20mA_CH1_Holding OR i_Range_Setting_0to20mA_CH2_Holding OR i_Range_Setting_0to20mA_CH3_Holding OR i_Range_Setting_0to20mA_CH4_Holding THEN
+	i_Range_Setting_0to20mA_Holding_Flag_Check := TRUE;
+	ELSE
+	i_Range_Setting_0to20mA_Holding_Flag_Check := FALSE;
+END_IF;
+
+IF i_Range_Setting_0to5V_CH1_Holding OR i_Range_Setting_0to5V_CH2_Holding OR i_Range_Setting_0to5V_CH3_Holding OR i_Range_Setting_0to5V_CH4_Holding THEN
+	i_Range_Setting_0to5V_Holding_Flag_Check := TRUE;
+	ELSE
+	i_Range_Setting_0to5V_Holding_Flag_Check := FALSE;
+END_IF;
+
+IF i_Range_Setting_1to5V_CH1_Holding OR i_Range_Setting_1to5V_CH2_Holding OR i_Range_Setting_1to5V_CH3_Holding OR i_Range_Setting_1to5V_CH4_Holding THEN
+	i_Range_Setting_1to5V_Holding_Flag_Check := TRUE;
+	ELSE
+	i_Range_Setting_1to5V_Holding_Flag_Check := FALSE;
+END_IF;
+
+IF i_Range_Setting_4to20mA_CH1_Holding OR i_Range_Setting_4to20mA_CH2_Holding OR i_Range_Setting_4to20mA_CH3_Holding OR i_Range_Setting_4to20mA_CH4_Holding THEN
+	i_Range_Setting_4to20mA_Holding_Flag_Check := TRUE;
+	ELSE
+	i_Range_Setting_4to20mA_Holding_Flag_Check := FALSE;
+END_IF;
+
+IF i_Range_Setting_m10to10V_CH1_Holding OR i_Range_Setting_m10to10V_CH2_Holding OR i_Range_Setting_m10to10V_CH3_Holding OR i_Range_Setting_m10to10V_CH4_Holding THEN
+	i_Range_Setting_m10to10V_Holding_Flag_Check := TRUE;
+	ELSE
+	i_Range_Setting_m10to10V_Holding_Flag_Check := FALSE;
+END_IF;
+
+(* Group i_Range_Setting_Flag_Check *)
+IF i_Range_Setting_0to20mA_Holding_Flag_Check OR i_Range_Setting_0to5V_Holding_Flag_Check OR i_Range_Setting_1to5V_Holding_Flag_Check OR i_Range_Setting_4to20mA_Holding_Flag_Check OR i_Range_Setting_m10to10V_Holding_Flag_Check THEN
+    i_Range_Setting_Flag_Check := TRUE;
+    ELSE
+    i_Range_Setting_Flag_Check := FALSE;
+END_IF;
+
+
+
+(* For Create Previous Station Holding *)
+MOV(i_Ena_Holding_Flag_Check OR i_Range_Setting_m10to10V_Holding_Flag_Check OR i_Range_Setting_0to20mA_Holding_Flag_Check OR i_Range_Setting_0to5V_Holding_Flag_Check OR i_Range_Setting_1to5V_Holding_Flag_Check OR i_Range_Setting_4to20mA_Holding_Flag_Check AND Enterling_Button,Staion_Index_For_Y_Set_Holding,Previous_Index);
+
+(* Trigger for clear stage *)
+IF Staion_Index_For_Y_Set_Holding=Previous_Index THEN
+	PLF(Enterling_Button,Flag_Clear_Stage);
+END_IF;
+
+(* Ena Variable Holding *)
+//SET
+SET(i_Ena_CH1 , i_Ena_CH1_Holding  );
+SET(i_Ena_CH2 , i_Ena_CH2_Holding  );
+SET(i_Ena_CH3 , i_Ena_CH3_Holding  );
+SET(i_Ena_CH4 , i_Ena_CH4_Holding  );
+//RST
+RST(Flag_Clear_Stage, i_Ena_CH1_Holding );
+RST(Flag_Clear_Stage, i_Ena_CH2_Holding );
+RST(Flag_Clear_Stage, i_Ena_CH3_Holding );
+RST(Flag_Clear_Stage, i_Ena_CH4_Holding );
+
+(* Rage_Setting Variable Holding *)
+//SET
+//CH1
+SET(i_Range_Setting_m10to10V_CH1 , i_Range_Setting_m10to10V_CH1_Holding  );
+SET(i_Range_Setting_0to5V_CH1 , i_Range_Setting_0to5V_CH1_Holding  );
+SET(i_Range_Setting_1to5V_CH1 , i_Range_Setting_1to5V_CH1_Holding  );
+SET(i_Range_Setting_0to20mA_CH1 , i_Range_Setting_0to20mA_CH1_Holding  );
+SET(i_Range_Setting_4to20mA_CH1 , i_Range_Setting_4to20mA_CH1_Holding  );
+//CH2
+SET(i_Range_Setting_m10to10V_CH2 , i_Range_Setting_m10to10V_CH2_Holding  );
+SET(i_Range_Setting_0to5V_CH2 , i_Range_Setting_0to5V_CH2_Holding  );
+SET(i_Range_Setting_1to5V_CH2 , i_Range_Setting_1to5V_CH2_Holding  );
+SET(i_Range_Setting_0to20mA_CH2 , i_Range_Setting_0to20mA_CH2_Holding  );
+SET(i_Range_Setting_4to20mA_CH2 , i_Range_Setting_4to20mA_CH2_Holding  );
+//CH3
+SET(i_Range_Setting_m10to10V_CH3 , i_Range_Setting_m10to10V_CH3_Holding  );
+SET(i_Range_Setting_0to5V_CH3 , i_Range_Setting_0to5V_CH3_Holding  );
+SET(i_Range_Setting_1to5V_CH3 , i_Range_Setting_1to5V_CH3_Holding  );
+SET(i_Range_Setting_0to20mA_CH3 , i_Range_Setting_0to20mA_CH3_Holding  );
+SET(i_Range_Setting_4to20mA_CH3 , i_Range_Setting_4to20mA_CH3_Holding  );
+//CH4
+SET(i_Range_Setting_m10to10V_CH4 , i_Range_Setting_m10to10V_CH4_Holding  );
+SET(i_Range_Setting_0to5V_CH4 , i_Range_Setting_0to5V_CH4_Holding  );
+SET(i_Range_Setting_1to5V_CH4 , i_Range_Setting_1to5V_CH4_Holding  );
+SET(i_Range_Setting_0to20mA_CH4 , i_Range_Setting_0to20mA_CH4_Holding  );
+SET(i_Range_Setting_4to20mA_CH4 , i_Range_Setting_4to20mA_CH4_Holding  );
+//RST
+//CH1
+RST(Flag_Clear_Stage , i_Range_Setting_m10to10V_CH1_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to5V_CH1_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_1to5V_CH1_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to20mA_CH1_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_4to20mA_CH1_Holding  );
+//CH2
+RST(Flag_Clear_Stage , i_Range_Setting_m10to10V_CH2_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to5V_CH2_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_1to5V_CH2_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to20mA_CH2_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_4to20mA_CH2_Holding  );
+//CH3
+RST(Flag_Clear_Stage , i_Range_Setting_m10to10V_CH3_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to5V_CH3_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_1to5V_CH3_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to20mA_CH3_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_4to20mA_CH3_Holding  );
+//CH4
+RST(Flag_Clear_Stage , i_Range_Setting_m10to10V_CH4_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to5V_CH4_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_1to5V_CH4_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_0to20mA_CH4_Holding  );
+RST(Flag_Clear_Stage , i_Range_Setting_4to20mA_CH4_Holding  );
+
+
+
+
+(* Enable Chanel *)
+IF i_Ena_CH1_Holding THEN
+	FMOVP(TRUE,H1,K1,K1Y0Z0);
+
+ELSIF i_Ena_CH2_Holding THEN
+	FMOVP(TRUE,H2,K1,K1Y0Z0);
+	ELSIF i_Ena_CH3_Holding THEN
+	FMOVP(TRUE,H3,K1,K1Y0Z0);
+	ELSIF i_Ena_CH4_Holding THEN
+	FMOVP(TRUE,H4,K1,K1Y0Z0);
+
+END_IF;
+
+
+(* Range Setting *)
+IF i_Range_Setting_m10to10V_CH1_Holding THEN
+	FMOVP(TRUE,H0,K1,K1Y4Z0);
+	MOVP(TRUE, H1,Analog_Parameter_Setting_Fn_CH1);
+	ELSIF i_Range_Setting_0to5V_CH1_Holding THEN
+	FMOVP(TRUE,H1,K1,K1Y4Z0);
+	MOVP(TRUE, H2,Analog_Parameter_Setting_Fn_CH1);
+	ELSIF i_Range_Setting_1to5V_CH1_Holding THEN
+	FMOVP(TRUE,H2,K1,K1Y4Z0);
+	MOVP(TRUE, H3,Analog_Parameter_Setting_Fn_CH1);
+	ELSIF i_Range_Setting_0to20mA_CH1_Holding THEN
+	FMOVP(TRUE,H3,K1,K1Y4Z0);
+	MOVP(TRUE, H4,Analog_Parameter_Setting_Fn_CH1);
+	ELSIF i_Range_Setting_4to20mA_CH1_Holding THEN
+	FMOVP(TRUE,H4,K1,K1Y4Z0);
+	MOVP(TRUE, H5,Analog_Parameter_Setting_Fn_CH1);
+
+END_IF;
+
+
+
+IF i_Range_Setting_m10to10V_CH2_Holding THEN
+	FMOVP(TRUE,H0,K1,K1Y7Z0);
+	MOVP(TRUE, H1,Analog_Parameter_Setting_Fn_CH2);
+	ELSIF i_Range_Setting_0to5V_CH2_Holding THEN
+	FMOVP(TRUE,H1,K1,K1Y7Z0);
+	MOVP(TRUE, H2,Analog_Parameter_Setting_Fn_CH2);
+	ELSIF i_Range_Setting_1to5V_CH2_Holding THEN
+	FMOVP(TRUE,H2,K1,K1Y7Z0);
+	MOVP(TRUE, H3,Analog_Parameter_Setting_Fn_CH2);
+	ELSIF i_Range_Setting_0to20mA_CH2_Holding THEN
+	FMOVP(TRUE,H3,K1,K1Y7Z0);
+	MOVP(TRUE, H4,Analog_Parameter_Setting_Fn_CH2);
+	ELSIF i_Range_Setting_4to20mA_CH2_Holding THEN
+	FMOVP(TRUE,H4,K1,K1Y7Z0);
+	MOVP(TRUE, H5,Analog_Parameter_Setting_Fn_CH2);
+
+END_IF;
+
+IF i_Range_Setting_m10to10V_CH3_Holding THEN
+	FMOVP(TRUE,H0,K1,K1YAZ0);
+	MOVP(TRUE, H1,Analog_Parameter_Setting_Fn_CH3);
+	ELSIF i_Range_Setting_0to5V_CH3_Holding THEN
+	FMOVP(TRUE,H1,K1,K1YAZ0);
+	MOVP(TRUE, H2,Analog_Parameter_Setting_Fn_CH3);
+	ELSIF i_Range_Setting_1to5V_CH3_Holding THEN
+	FMOVP(TRUE,H2,K1,K1YAZ0);
+	MOVP(TRUE, H3,Analog_Parameter_Setting_Fn_CH3);
+	ELSIF i_Range_Setting_0to20mA_CH3_Holding THEN
+	FMOVP(TRUE,H3,K1,K1YAZ0);
+	MOVP(TRUE, H4,Analog_Parameter_Setting_Fn_CH3);
+	ELSIF i_Range_Setting_4to20mA_CH3_Holding THEN
+	FMOVP(TRUE,H4,K1,K1YAZ0);
+	MOVP(TRUE, H5,Analog_Parameter_Setting_Fn_CH3);
+
+END_IF;
+
+IF i_Range_Setting_m10to10V_CH4_Holding THEN
+	FMOVP(TRUE,H0,K1,K1YDZ0);
+	MOVP(TRUE, H1,Analog_Parameter_Setting_Fn_CH4);
+	ELSIF i_Range_Setting_0to5V_CH4_Holding THEN
+	FMOVP(TRUE,H1,K1,K1YDZ0);
+	MOVP(TRUE, H2,Analog_Parameter_Setting_Fn_CH4);
+	ELSIF i_Range_Setting_1to5V_CH4_Holding THEN
+	FMOVP(TRUE,H2,K1,K1YDZ0);
+	MOVP(TRUE, H3,Analog_Parameter_Setting_Fn_CH4);
+	ELSIF i_Range_Setting_0to20mA_CH4_Holding THEN
+	FMOVP(TRUE,H3,K1,K1YDZ0);
+	MOVP(TRUE, H4,Analog_Parameter_Setting_Fn_CH4);
+	ELSIF i_Range_Setting_4to20mA_CH4_Holding THEN
+	FMOVP(TRUE,H4,K1,K1YDZ0);
+	MOVP(TRUE, H5,Analog_Parameter_Setting_Fn_CH4);
+
+END_IF;
+
+
+(* Reset State *)
+// Reset Type Chanel by Chanel
+(*
+IF Y0Z0 = 1 THEN
+    IF i_Ena_CH1_Holding THEN
+        Y0Z0 := FALSE;
+    END_IF;
+END_IF;
+
+IF Y1Z0 = 1 THEN
+    IF i_Ena_CH2_Holding THEN
+        Y1Z0 := FALSE;
+    END_IF;
+END_IF;
+
+IF Y2Z0 = 1 THEN
+    IF i_Ena_CH3_Holding THEN
+        Y2Z0 := FALSE;
+    END_IF;
+END_IF;
+
+IF Y3Z0 = 1 THEN
+    IF i_Ena_CH4_Holding THEN
+        Y3Z0 := FALSE;
+    END_IF;
+END_IF;
+*)
+
+// Reset Type All Chanel reset
+IF Reset_Setting THEN
+	FMOVP(TRUE,H0,K1,K1Y0Z0);
+END_IF;
+
+// Function Check Disable state for clear all range setting
+
+IF Y0Z0 = 0 THEN
+	FMOVP(TRUE,H0,K1,K1Y4Z0);
+END_IF;
+
+IF Y1Z0 = 0 THEN
+	FMOVP(TRUE,H0,K1,K1Y7Z0);
+END_IF;
+
+IF Y2Z0 = 0 THEN
+	FMOVP(TRUE,H0,K1,K1YAZ0);
+END_IF;
+
+IF Y3Z0 = 0 THEN
+	FMOVP(TRUE,H0,K1,K1YDZ0);
+END_IF;
+
+
+;
