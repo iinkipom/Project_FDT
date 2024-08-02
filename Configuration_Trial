@@ -1,0 +1,705 @@
+IF i_Box_Station_Selection = 1 AND i_Ena_CH1 THEN
+	i_Enable_ST1_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Ena_CH2 THEN
+	i_Enable_ST1_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Ena_CH3 THEN
+	i_Enable_ST1_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Ena_CH4 THEN
+	i_Enable_ST1_CH4 := TRUE;
+END_IF;
+
+
+IF i_Box_Station_Selection = 2 AND i_Ena_CH1 THEN
+	i_Enable_ST2_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Ena_CH2 THEN
+	i_Enable_ST2_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Ena_CH3 THEN
+	i_Enable_ST2_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Ena_CH4 THEN
+	i_Enable_ST2_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 3 AND i_Ena_CH1 THEN
+	i_Enable_ST3_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Ena_CH2 THEN
+	i_Enable_ST3_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Ena_CH3 THEN
+	i_Enable_ST3_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Ena_CH4 THEN
+	i_Enable_ST3_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Ena_CH1 THEN
+	i_Enable_ST4_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Ena_CH2 THEN
+	i_Enable_ST4_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Ena_CH3 THEN
+	i_Enable_ST4_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Ena_CH4 THEN
+	i_Enable_ST4_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Ena_CH1 THEN
+	i_Enable_ST5_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Ena_CH2 THEN
+	i_Enable_ST5_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Ena_CH3 THEN
+	i_Enable_ST5_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Ena_CH4 THEN
+	i_Enable_ST5_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Ena_CH1 THEN
+	i_Enable_ST6_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Ena_CH2 THEN
+	i_Enable_ST6_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Ena_CH3 THEN
+	i_Enable_ST6_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Ena_CH4 THEN
+	i_Enable_ST6_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Ena_CH1 THEN
+	i_Enable_STCP_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Ena_CH2 THEN
+	i_Enable_STCP_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Ena_CH3 THEN
+	i_Enable_STCP_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Ena_CH4 THEN
+	i_Enable_STCP_CH4 := TRUE;
+END_IF;
+
+
+
+
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_ST1_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_ST1_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_ST1_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_ST1_CH4 := TRUE;
+END_IF;
+
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_ST2_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_ST2_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_ST2_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_ST2_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_ST3_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_ST3_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_ST3_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_ST3_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_ST4_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_ST4_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_ST4_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_ST4_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_ST5_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_ST5_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_ST5_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_ST5_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_ST6_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_ST6_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_ST6_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_ST6_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to20mA_CH1 THEN
+	i_Range_Setting_0to20mA_STCP_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to20mA_CH2 THEN
+	i_Range_Setting_0to20mA_STCP_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to20mA_CH3 THEN
+	i_Range_Setting_0to20mA_STCP_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to20mA_CH4 THEN
+	i_Range_Setting_0to20mA_STCP_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_ST1_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_ST1_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_ST1_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_ST1_CH4 := TRUE;
+END_IF;
+
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_ST2_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_ST2_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_ST2_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_ST2_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_ST3_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_ST3_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_ST3_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_ST3_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_ST4_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_ST4_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_ST4_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_ST4_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_ST5_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_ST5_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_ST5_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_ST5_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_ST6_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_ST6_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_ST6_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_ST6_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_4to20mA_CH1 THEN
+	i_Range_Setting_4to20mA_STCP_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_4to20mA_CH2 THEN
+	i_Range_Setting_4to20mA_STCP_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_4to20mA_CH3 THEN
+	i_Range_Setting_4to20mA_STCP_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_4to20mA_CH4 THEN
+	i_Range_Setting_4to20mA_STCP_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_ST1_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_ST1_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_ST1_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_ST1_CH4 := TRUE;
+END_IF;
+
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_ST2_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_ST2_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_ST2_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_ST2_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_ST3_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_ST3_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_ST3_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_ST3_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_ST4_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_ST4_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_ST4_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_ST4_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_ST5_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_ST5_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_ST5_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_ST5_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_ST6_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_ST6_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_ST6_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_ST6_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to5V_CH1 THEN
+	i_Range_Setting_0to5V_STCP_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to5V_CH2 THEN
+	i_Range_Setting_0to5V_STCP_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to5V_CH3 THEN
+	i_Range_Setting_0to5V_STCP_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_0to5V_CH4 THEN
+	i_Range_Setting_0to5V_STCP_CH4 := TRUE;
+END_IF;
+
+
+
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_ST1_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_ST1_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_ST1_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_ST1_CH4 := TRUE;
+END_IF;
+
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_ST2_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_ST2_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_ST2_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_ST2_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_ST3_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_ST3_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_ST3_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_ST3_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_ST4_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_ST4_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_ST4_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_ST4_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_ST5_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_ST5_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_ST5_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_ST5_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_ST6_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_ST6_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_ST6_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_ST6_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_1to5V_CH1 THEN
+	i_Range_Setting_1to5V_STCP_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_1to5V_CH2 THEN
+	i_Range_Setting_1to5V_STCP_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_1to5V_CH3 THEN
+	i_Range_Setting_1to5V_STCP_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_1to5V_CH4 THEN
+	i_Range_Setting_1to5V_STCP_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_ST1_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_ST1_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_ST1_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 1 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_ST1_CH4 := TRUE;
+END_IF;
+
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_ST2_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_ST2_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_ST2_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 2 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_ST2_CH4 := TRUE;
+END_IF;
+
+
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_ST3_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_ST3_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_ST3_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 3 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_ST3_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_ST4_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_ST4_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_ST4_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 4 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_ST4_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_ST5_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_ST5_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_ST5_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 5 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_ST5_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_ST6_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_ST6_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_ST6_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 6 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_ST6_CH4 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_m10to10V_CH1 THEN
+	i_Range_Setting_m10to10V_STCP_CH1 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_m10to10V_CH2 THEN
+	i_Range_Setting_m10to10V_STCP_CH2 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_m10to10V_CH3 THEN
+	i_Range_Setting_m10to10V_STCP_CH3 := TRUE;
+END_IF;
+
+IF i_Box_Station_Selection = 10 AND i_Range_Setting_m10to10V_CH4 THEN
+	i_Range_Setting_m10to10V_STCP_CH4 := TRUE;
+END_IF;
+
+
+;
