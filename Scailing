@@ -93,19 +93,19 @@
 
 // ST1_CH1_H1
 
-IF Y400 THEN
-IF Analog_Parameter_Setting_Fn_CH1 = H1 THEN
+
+IF Analog_Parameter_Setting_Fn_CH1_H1_Holding THEN
 	o_Real_Value_Display_ST1_CH1 := Analog_MIN_m10to10V + (((Analog_MAX_m10to10V - Analog_MIN_m10to10V)/(Digital_MAX_m10to10V - Digital_MIN_m10to10V))*(ir_Digital_Value_ST1_CH1 - Digital_MIN_m10to10V));
-	ELSIF Analog_Parameter_Setting_Fn_CH1 = H2 THEN
+	ELSIF Analog_Parameter_Setting_Fn_CH1_H2_Holding THEN
 	o_Real_Value_Display_ST1_CH1 := Analog_MIN_0to5V + (((Analog_MAX_0to5V - Analog_MIN_0to5V)/(Digital_MAX_0to5V - Digital_MIN_0to5V))*(ir_Digital_Value_ST1_CH1 - Digital_MIN_0to5V));
-	ELSIF Analog_Parameter_Setting_Fn_CH1 = H3 THEN
+	ELSIF Analog_Parameter_Setting_Fn_CH1_H3_Holding THEN
 	o_Real_Value_Display_ST1_CH1 := Analog_MIN_1to5V + (((Analog_MAX_1to5V - Analog_MIN_1to5V)/(Digital_MAX_1to5V - Digital_MIN_1to5V))*(ir_Digital_Value_ST1_CH1 - Digital_MIN_1to5V));
-	ELSIF Analog_Parameter_Setting_Fn_CH1 = H4 THEN
+	ELSIF Analog_Parameter_Setting_Fn_CH1_H4_Holding THEN
 	o_Real_Value_Display_ST1_CH1 := Analog_MIN_0to20mA + (((Analog_MAX_0to20mA - Analog_MIN_0to20mA)/(Digital_MAX_0to20mA - Digital_MIN_0to20mA))*(ir_Digital_Value_ST1_CH1 - Digital_MIN_0to20mA));
-	ELSIF Analog_Parameter_Setting_Fn_CH1 = H5 THEN
+	ELSIF Analog_Parameter_Setting_Fn_CH1_H5_Holding THEN
 	o_Real_Value_Display_ST1_CH1 := Analog_MIN_4to20mA + (((Analog_MAX_4to20mA - Analog_MIN_4to20mA)/(Digital_MAX_4to20mA - Digital_MIN_4to20mA))*(ir_Digital_Value_ST1_CH1 - Digital_MIN_4to20mA));
 END_IF;
-END_IF;
+
 
 IF Y401 THEN
 IF Analog_Parameter_Setting_Fn_CH2 = H1 THEN
