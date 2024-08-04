@@ -1,0 +1,58 @@
+(* Enable Chanel *)
+IF i_Ena_CH1 THEN
+    Y0Z0 := TRUE;
+    //MOVP(TRUE,K1,Y0Z0);
+    INCP(TRUE,D35Z1);
+END_IF;
+IF i_Ena_CH2 THEN
+    Y1Z0 := TRUE;
+    //MOVP(TRUE,K1,Y0Z0);
+    INCP(TRUE,D36Z1);
+END_IF;
+IF i_Ena_CH3 THEN
+    Y2Z0 := TRUE;
+    //MOVP(TRUE,K1,Y0Z0);
+    INCP(TRUE,D37Z1);
+END_IF
+IF i_Ena_CH4 THEN
+    Y3Z0 := TRUE;
+    //MOVP(TRUE,K1,Y0Z0);
+    INCP(TRUE,D38Z1);
+END_IF
+
+(* Disable Chanel Flag *)
+IF D35Z1 = 2 THEN
+    PLF(i_Ena_CH1,Y0Z0 := FALSE);
+    MOVP(TRUE,K0,D35Z1);
+END_IF;
+IF D36Z1 = 2 THEN
+    PLF(i_Ena_CH2,Y1Z0 := FALSE);
+    MOVP(TRUE,K0,D36Z1);
+END_IF;
+IF D37Z1 = 2 THEN
+    PLF(i_Ena_CH3,Y2Z0 := FALSE);
+    MOVP(TRUE,K0,D37Z1);
+END_IF;
+IF D38Z1 = 2 THEN
+    PLF(i_Ena_CH4,Y3Z0 := FALSE;);
+    MOVP(TRUE,K0,D38Z1);
+END_IF;
+
+(* Disable Chanel 
+IF M0Z1 THEN
+    
+    
+END_IF;
+IF M1Z1 THEN
+    
+    
+END_IF;
+IF M2Z1 THEN
+    
+    
+END_IF;
+IF M3Z1 THEN
+    
+    
+END_IF;
+*)
