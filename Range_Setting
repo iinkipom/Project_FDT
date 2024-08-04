@@ -1,0 +1,56 @@
+(* Range Setting *)
+IF Y0Z0 THEN
+    IF i_Range_Setting_m10to10V_CH1 THEN
+        FMOVP(TRUE,H0,K1,K1Y4Z0);
+    ELSIF i_Range_Setting_0to5V_CH1 THEN
+        FMOVP(TRUE,H1,K1,K1Y4Z0);
+    ELSIF i_Range_Setting_1to5V_CH1 THEN
+        FMOVP(TRUE,H2,K1,K1Y4Z0);
+    ELSIF i_Range_Setting_0to20mA_CH1 THEN
+        FMOVP(TRUE,H3,K1,K1Y4Z0);
+    ELSIF i_Range_Setting_4to20mA_CH1 THEN
+        FMOVP(TRUE,H4,K1,K1Y4Z0);
+    END_IF;
+END_IF;
+
+IF Y1Z0 THEN
+    IF i_Range_Setting_m10to10V_CH2 THEN
+        FMOVP(TRUE,H0,K1,K1Y7Z0);
+    ELSIF i_Range_Setting_0to5V_CH2 THEN
+        FMOVP(TRUE,H1,K1,K1Y7Z0);
+    ELSIF i_Range_Setting_1to5V_CH2 THEN
+        FMOVP(TRUE,H2,K1,K1Y7Z0);
+    ELSIF i_Range_Setting_0to20mA_CH2 THEN
+        FMOVP(TRUE,H3,K1,K1Y7Z0);
+    ELSIF i_Range_Setting_4to20mA_CH2 THEN
+        FMOVP(TRUE,H4,K1,K1Y7Z0);
+    END_IF;
+END_IF;
+
+IF Y2Z0 THEN
+    IF i_Range_Setting_m10to10V_CH3 THEN
+        FMOVP(TRUE,H0,K1,K1YAZ0);
+    ELSIF i_Range_Setting_0to5V_CH3 THEN
+        FMOVP(TRUE,H1,K1,K1YAZ0);
+    ELSIF i_Range_Setting_1to5V_CH3 THEN
+        FMOVP(TRUE,H2,K1,K1YAZ0);
+    ELSIF i_Range_Setting_0to20mA_CH3 THEN
+        FMOVP(TRUE,H3,K1,K1YAZ0);
+    ELSIF i_Range_Setting_4to20mA_CH3 THEN
+        FMOVP(TRUE,H4,K1,K1YAZ0);
+    END_IF;
+END_IF;
+
+IF Y3Z0 THEN
+    IF i_Range_Setting_m10to10V_CH4 THEN
+        FMOVP(TRUE,H0,K1,K1YDZ0);
+    ELSIF i_Range_Setting_0to5V_CH4 THEN
+        FMOVP(TRUE,H1,K1,K1YDZ0);
+    ELSIF i_Range_Setting_1to5V_CH4 THEN
+        FMOVP(TRUE,H2,K1,K1YDZ0);
+    ELSIF i_Range_Setting_0to20mA_CH4 THEN
+        FMOVP(TRUE,H3,K1,K1YDZ0);
+    ELSIF i_Range_Setting_4to20mA_CH4 THEN
+        FMOVP(TRUE,H4,K1,K1YDZ0);
+    END_IF;
+END_IF; 
