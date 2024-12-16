@@ -98,6 +98,25 @@ IF Staion_Index_For_Y_Set_Holding=Previous_Index THEN
 	PLF(Enterling_Button,Flag_Clear_Stage);
 END_IF;
 
+IF i_Box_Station_Selection = 1 THEN
+IF i_Ena_CH1 THEN
+	INCP(TRUE,i_Enable_Counting_ST1_CH1);
+END_IF;
+
+
+IF i_Enable_Counting_ST1_CH1 = 2 THEN
+	MOVP(TRUE,H0,K1Y0Z0);
+	PLF(i_Ena_CH1,Reset_Enable_Holding);
+END_IF;
+IF Reset_Enable_Holding THEN
+	MOVP(TRUE,K0,i_Enable_Counting);
+END_IF;
+END_IF;
+
+
+
+
+
 (* Ena Variable Holding *)
 //SET
 SET(i_Ena_CH1 , i_Ena_CH1_Holding  );
@@ -254,6 +273,55 @@ IF i_Range_Setting_m10to10V_CH4_Holding THEN
 
 END_IF;
 
+
+IF i_Box_Station_Selection = 1 THEN
+	IF Analog_Parameter_Setting_Fn_CH1 = H1 THEN
+		Analog_Parameter_Setting_Fn_CH1_H1_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H2 THEN
+		Analog_Parameter_Setting_Fn_CH1_H2_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H3 THEN
+		Analog_Parameter_Setting_Fn_CH1_H3_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H4 THEN
+		Analog_Parameter_Setting_Fn_CH1_H4_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH1 = H5 THEN
+		Analog_Parameter_Setting_Fn_CH1_H5_Holding := TRUE;
+	END_IF;
+	IF Analog_Parameter_Setting_Fn_CH2 = H1 THEN
+		Analog_Parameter_Setting_Fn_CH2_H1_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H2 THEN
+		Analog_Parameter_Setting_Fn_CH2_H2_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H3 THEN
+		Analog_Parameter_Setting_Fn_CH2_H3_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H4 THEN
+		Analog_Parameter_Setting_Fn_CH2_H4_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH2 = H5 THEN
+		Analog_Parameter_Setting_Fn_CH2_H5_Holding := TRUE;
+	END_IF;
+	IF Analog_Parameter_Setting_Fn_CH3 = H1 THEN
+		Analog_Parameter_Setting_Fn_CH3_H1_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H2 THEN
+		Analog_Parameter_Setting_Fn_CH3_H2_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H3 THEN
+		Analog_Parameter_Setting_Fn_CH3_H3_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H4 THEN
+		Analog_Parameter_Setting_Fn_CH3_H4_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH3 = H5 THEN
+		Analog_Parameter_Setting_Fn_CH3_H5_Holding := TRUE;
+	END_IF;
+	IF Analog_Parameter_Setting_Fn_CH4 = H1 THEN
+		Analog_Parameter_Setting_Fn_CH4_H1_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H2 THEN
+		Analog_Parameter_Setting_Fn_CH4_H2_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H3 THEN
+		Analog_Parameter_Setting_Fn_CH4_H3_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H4 THEN
+		Analog_Parameter_Setting_Fn_CH4_H4_Holding := TRUE;
+	ELSIF Analog_Parameter_Setting_Fn_CH4 = H5 THEN
+		Analog_Parameter_Setting_Fn_CH4_H5_Holding := TRUE;
+	END_IF;
+END_IF;
+	
+	
 
 (* Reset State *)
 // Reset Type Chanel by Chanel
